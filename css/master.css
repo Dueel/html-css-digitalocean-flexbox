@@ -1,0 +1,71 @@
+/* ------------ REGOLE GENERALI E STRUTTURA ------------ */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+
+.box{
+  width: 80%;
+  margin: 0 auto;
+  /* DEBUG:  */
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0;
+  background-color: #F3F5F9;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------------ REGOLE SPECIFICHE ------------ */
+
+/* nav */
+nav .box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img{
+  width: 200px;
+}
+
+nav ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li:first-child{
+  margin-left: 0;
+}
+
+.menu{
+  color: #006AFF;
+  font-size: 30px;
+  display: none;
+}
+
+@media all and (max-width: 991px) {
+
+  nav ul{
+    display: none;
+  }
+
+  .menu{
+    display: block;
+  }
+}
