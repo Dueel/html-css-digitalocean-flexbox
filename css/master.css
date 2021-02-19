@@ -22,8 +22,14 @@ nav{
   top: 0;
   left: 0;
   right: 0;
+  height: 80px;
   padding: 20px 0;
   background-color: #F3F5F9;
+}
+
+header{
+  background-image: url('../img/jumbo.svg');
+  padding: 130px 0 50px;
 }
 
 a{
@@ -46,7 +52,7 @@ nav img{
 
 nav ul li{
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 nav ul li:first-child{
@@ -59,6 +65,46 @@ nav ul li:first-child{
   display: none;
 }
 
+/* header */
+header>.box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title, .sub{
+  width: 49%;
+  /* DEBUG:  */
+  /* min-height: 290px; */
+  background-color: rgba(255, 0, 0, 0.5);
+  border: 1px solid red;
+}
+
+.sub>div{
+  background-color: white;
+  border-radius: 10px;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+h1{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-size: 30px;
+  color: #031C4E;
+  margin-bottom: 20px;
+
+}
+
+.sub input, .sub button{
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
 @media all and (max-width: 991px) {
 
   nav ul{
@@ -67,5 +113,17 @@ nav ul li:first-child{
 
   .menu{
     display: block;
+  }
+
+  header>.box{
+    display: block;
+  }
+
+  .title, .sub{
+    width: 100%;
+  }
+
+  header .title{
+    margin-bottom: 20px;
   }
 }
