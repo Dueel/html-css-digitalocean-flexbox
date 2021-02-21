@@ -13,8 +13,6 @@ body{
 .box{
   width: 80%;
   margin: 0 auto;
-  /* DEBUG:  */
-  background-color: rgba(255, 0, 0, 0.5);
 }
 
 nav{
@@ -24,7 +22,7 @@ nav{
   right: 0;
   height: 80px;
   padding: 20px 0;
-  background-color: #F3F5F9;
+  background-color: white;
 }
 
 header{
@@ -46,8 +44,13 @@ nav .box{
   align-items: center;
 }
 
-nav img{
+.logo img:first-child{
   width: 200px;
+}
+
+.logo img:last-child{
+  width: 40px;
+  display: none;
 }
 
 nav ul li{
@@ -57,6 +60,13 @@ nav ul li{
 
 nav ul li:first-child{
   margin-left: 0;
+}
+
+#signup{
+  color: #004AFF;
+  padding: 10px 15px;
+  border: 1px solid #004AFF;
+  border-radius: 5px;
 }
 
 .menu{
@@ -71,17 +81,14 @@ header>.box{
   justify-content: space-between;
 }
 
-.title, .sub{
+.title,
+.sub{
   width: 49%;
-  /* DEBUG:  */
-  /* min-height: 290px; */
-  background-color: rgba(255, 0, 0, 0.5);
-  border: 1px solid red;
 }
 
-.sub>div{
+.sub{
   background-color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   height: 100%;
   padding: 20px;
   text-align: center;
@@ -92,23 +99,89 @@ h1{
   margin-bottom: 20px;
 }
 
+.title h1,
+.title p{
+  color: white;
+}
+
+.title p{
+  line-height: 1.5em;
+}
+
 h2{
   font-size: 30px;
   color: #031C4E;
   margin-bottom: 20px;
-
 }
 
-.sub input, .sub button{
+.sub a{
+  color: #004AFF;
+}
+
+.sub input,
+.sub button{
   width: 100%;
+  border-radius: 4px;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
 }
 
+.sub input{
+  padding: 12px 5px;
+  border: 1px solid lightgrey;
+}
+
+.sub button{
+  padding: 8px 0;
+  border: none;
+}
+
+button[name=create]{
+  background-color: #579AFF;
+  color: white;
+}
+
+button[name=google]{
+  background-color: white;
+  box-shadow: 2px 2px 1px lightgrey;
+}
+
+.sub p{
+  font-size: 10px;
+}
+
+/* I section */
+section{
+  background-color: #F3F5F9;
+  text-align: center;
+  padding: 40px 0;
+}
+#customers{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logos{
+  width: calc(95% / 6);
+}
+
+.logos img{
+  width: 100%;
+}
+
+/* ------------ RESPONSIVE ------------ */
 @media all and (max-width: 991px) {
 
   nav ul{
     display: none;
+  }
+
+  nav ul li{
+    margin-left: 5px;
   }
 
   .menu{
@@ -125,5 +198,20 @@ h2{
 
   header .title{
     margin-bottom: 20px;
+  }
+
+  .logos{
+    width: 30%;
+  }
+}
+
+@media all and (max-width: 1100px) {
+
+  .logo img:first-child{
+    display: none;
+  }
+
+  .logo img:last-child{
+    display: block;
   }
 }
